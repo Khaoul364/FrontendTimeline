@@ -1,0 +1,11 @@
+
+<div class="modules-box">
+  {{modules?.ModuleName}}<br>
+
+  <img src="assets/img/trash.png" width="15px" height="15px" *ngIf="userId===modules?.modulesCreator" (click)="deleteModules(modules)">
+</div>
+
+
+
+
+

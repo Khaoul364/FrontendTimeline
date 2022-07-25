@@ -1,0 +1,38 @@
+<div class="addevent">
+  <a [routerLink]="['/calendar']">
+  <h6><- Back</h6>
+  </a>
+  <h3>Create Event</h3>
+  <form #f="ngForm" (ngSubmit)="addEvent(f.value)">
+
+    <label>Title:</label>
+    <input type="text" name="eventTitle" ngModel required #n="ngModel">
+    <div *ngIf="n.invalid && n.touched">
+      Title field is required.
+    </div>
+
+    <label>Description:</label>
+    <input type="text" name="eventDescription" ngModel #p="ngModel">
+
+
+    <label>Date:</label>
+    <input type="date" name="eventDate" ngModel #d="ngModel">
+    <div *ngIf="d.invalid && d.touched">
+      Date Field is required
+    </div>
+
+    <label>Start Time:</label>
+    <input type="text" name="eventStartTime" ngModel required #de="ngModel">
+
+    <label>End Time:</label>
+    <input type="text" name="eventEndTime" ngModel required #e="ngModel">
+
+    <label>Participants:</label>
+    <input type="text" name="eventParticipants" ngModel #e="ngModel" multiple>
+
+    <input type="submit" value="Add" [disabled]="f.invalid">
+  </form>
+
+
+
+</div>

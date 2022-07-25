@@ -1,0 +1,95 @@
+
+  <!--main content start-->
+  <section id="main-content">
+    <section class="wrapper">
+      <h3><i class="fa fa-angle-right"></i> Calendar</h3>
+      <br><br>
+      <!-- page start-->
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-2" >
+            <input type="button" value="Today" name="Today"/>
+            <input type="button" value="<" name="previousweek"/>
+            <input type="button" value=">" name="nextweek"/>
+          </div>
+
+          <div class="col-sm-10" >
+            <input type="button" value="New Event" name="New Event" (click)="redirectToAddEvent()"/>
+
+          </div>
+
+          </div>
+        <br>
+
+        <div class="row">
+              <div class="col-sm-2 days-labels" >
+                Monday
+              </div>
+              <div class="col-sm-2 days-labels"  >
+                Tuesday
+              </div>
+              <div class="col-sm-2 days-labels" >
+                Wednesday
+              </div>
+              <div class="col-sm-2 days-labels" >
+                Thursday
+              </div>
+              <div class="col-sm-2 days-labels" >
+                Friday
+              </div>
+              <div class="col-sm-2 days-labels" >
+                Saturday
+              </div>
+            </div>
+
+
+
+        <div class="row">
+          <div class="col-sm-2 events">
+            <div *ngFor="let eventToSend of eventsList ; let i=index">
+              <app-event-box *ngIf="eventToSend.range==1" [event]="eventToSend"
+              (eventToDelete)="removeEventFromEventList($event)"></app-event-box>
+            </div>
+          </div>
+          <div class="col-sm-2 events">
+            <div *ngFor="let eventToSend of eventsList ; let i=index">
+              <app-event-box *ngIf="eventToSend.range==2" [event]="eventToSend"
+                             (eventToDelete)="removeEventFromEventList($event)"></app-event-box>
+            </div>
+          </div>
+          <div class="col-sm-2 events">
+            <div *ngFor="let eventToSend of eventsList ; let i=index">
+              <app-event-box *ngIf="eventToSend.range==3" [event]="eventToSend"
+                             (eventToDelete)="removeEventFromEventList($event)"></app-event-box>
+            </div>
+          </div>
+          <div class="col-sm-2 events">
+            <div *ngFor="let eventToSend of eventsList ; let i=index">
+              <app-event-box *ngIf="eventToSend.range==4" [event]="eventToSend"
+                             (eventToDelete)="removeEventFromEventList($event)"></app-event-box>
+            </div>
+          </div>
+          <div class="col-sm-2 events">
+            <div *ngFor="let eventToSend of eventsList ; let i=index">
+              <app-event-box *ngIf="eventToSend.range==5" [event]="eventToSend"
+                             (eventToDelete)="removeEventFromEventList($event)"></app-event-box>
+            </div>
+          </div>
+          <div class="col-sm-2 events">
+            <div *ngFor="let eventToSend of eventsList ; let i=index">
+              <app-event-box *ngIf="eventToSend.range==6" [event]="eventToSend"
+                             (eventToDelete)="removeEventFromEventList($event)"></app-event-box>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      <!-- page end-->
+    </section>
+    <!-- /wrapper -->
+  </section>
+  <!-- /MAIN CONTENT -->
+  <!--main content end-->
+

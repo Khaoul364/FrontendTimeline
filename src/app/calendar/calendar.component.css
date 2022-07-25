@@ -1,0 +1,15 @@
+.container{
+
+  width: unset;
+  padding-left: 3%;
+}
+.days-labels{
+  border: 1px solid darkblue;
+  text-align: center;
+  font-style: oblique;
+  font-size: 15px;
+  font-weight: bold;
+}
+.events{
+  text-align: center;
+}

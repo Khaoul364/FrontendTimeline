@@ -1,0 +1,11 @@
+
+<div class="event-box">
+  {{event?.eventTitle}}<br>
+  {{event?.eventStartTime}} - {{event?.eventEndTime}}
+  <img src="assets/img/trash.png" width="15px" height="15px" *ngIf="userId===event?.eventCreator" (click)="deleteEvent(event)">
+</div>
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+
+  <!--main content start-->
+  <section id="main-content">
+    <section class="wrapper">
+<div class="addtask">
+  <a [routerLink]="['/broad']">
+  <h6> <- Back</h6>
+  </a>
+  <h3>Create task</h3>
+  <form #f="ngForm" (ngSubmit)="addTask(f.value)">
+
+    <label>taskTitle</label>
+    <input type="text" name="taskTitle" ngModel required #n="ngModel">
+    <div *ngIf="n.invalid && n.touched">
+      Title field is required.
+    </div>
+
+    <label>taskDescription</label>
+    <input type="text" name="taskDescription" ngModel #p="ngModel">
+
+
+    <label>status:</label>
+    <input type="text" name="status" ngModel #e="ngModel" multiple>
+
+    <label>severity:</label>
+    <input type="text" name="severity" ngModel #p="ngModel">
+
+    <label>priority:</label>
+    <input type="text" name="priority" ngModel #p="ngModel">
+
+    <input type="submit" value="Add" [disabled]="f.invalid">
+  </form>
+
+
+
+</div>
+</section>
+</section>

@@ -1,0 +1,36 @@
+
+  <!--main content start-->
+  <section id="main-content">
+    <section class="wrapper">
+
+      <div class="addmodules">
+  <a [routerLink]="['/broad']">
+  <h6> Back</h6>
+  </a>
+  <h3>Create Modules</h3>
+  <form #f="ngForm" (ngSubmit)="addModules(f.value)">
+
+    <label>ModuleName:</label>
+    <input type="text" name="ModuleName" ngModel required #n="ngModel">
+    <div *ngIf="n.invalid && n.touched">
+      Title field is required.
+    </div>
+
+    <label>ModuleDescription:</label>
+    <input type="text" name="ModuleDescription" ngModel #p="ngModel">
+
+
+    <label>priority:</label>
+    <input type="text" name="priority" ngModel #e="ngModel" multiple>
+
+    <label>Responsable:</label>
+    <input type="text" name="Responsable" ngModel #p="ngModel">
+
+    <input type="submit" value="Add" [disabled]="f.invalid">
+  </form>
+
+
+
+      </div> 
+</section>
+</section>
